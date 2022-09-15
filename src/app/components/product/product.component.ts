@@ -7,4 +7,5 @@ import { IProduct } from '../../models/product';
 })
 export class ProductComponent {
   @Input() product: IProduct;
+  @Input() length: number = 1;
 }

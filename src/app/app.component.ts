@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
-import {IProduct} from './models/product'
-import {products as data} from './data/products'
-
+import { IProduct } from './models/product';
+import { products as data } from './data/products';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'angular-test';
-
-  products: IProduct[] = data
+  productsLength: number = data.length;
+  products: IProduct[] = data;
 }
