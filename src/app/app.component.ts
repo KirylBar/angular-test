@@ -1,14 +1,21 @@
-import { Component } from '@angular/core';
-import { IProduct } from './models/product';
-import { products as data } from './data/products';
+import { Component, OnInit } from '@angular/core';
+import { TypeUser } from './models/userData';
+import { UsersService } from './services/users.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'angular-test';
-  productsLength: number = data.length;
-  products: IProduct[] = data;
+  users: TypeUser[] = [];
+
+  constructor(private usersService: UsersService) {}
+
+  ngOnInit(): void {
+    this.usersService.getAll().subscribe((users) => {
+      this.users = users;
+    });
+  }
 }
