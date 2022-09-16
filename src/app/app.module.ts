@@ -5,10 +5,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
-import { CardHeadComponent } from './components/cardHead.component/cardHead.component';
+import { CardHeadComponent } from './components/cardHead/cardHead.component';
+import { FilterUsersPipe } from './pipes/filter-users.pipe';
 
 @NgModule({
-  declarations: [AppComponent, CardComponent, CardHeadComponent],
+  declarations: [
+    AppComponent,
+    CardComponent,
+    CardHeadComponent,
+
+    FilterUsersPipe,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

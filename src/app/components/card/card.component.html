@@ -1,2 +1,48 @@
-
-
+<div class="row mt-5">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ users | filterUsers: "income" }}</h5>
+        <p class="card-text">Income</p>
+        <div class="text-center">
+          <a href="#" class="btn btn-primary text-center">See all</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ users | filterUsers: "investment" }}</h5>
+        <p class="card-text">Investments</p>
+        <div class="text-center">
+          <a href="#" class="btn btn-primary text-center">See all</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ users | filterUsers: "outcome" }}</h5>
+        <p class="card-text">Outcome</p>
+        <div class="text-center">
+          <a href="#" class="btn btn-primary text-center">See all</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ users | filterUsers: "loan" }}</h5>
+        <p class="card-text">Loans</p>
+        <div class="text-center">
+          <a href="#" class="btn btn-primary text-center">See all</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

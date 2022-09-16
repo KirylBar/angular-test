@@ -1,2 +1,4 @@
-<h1>{{ title | uppercase }}</h1>
-<app-cardHead [length]="users.length"></app-cardHead>
+<div class="container mx-auto" style="width: 700px">
+  <div class="row"><app-cardHead [length]="users.length"></app-cardHead></div>
+  <app-card [users]="users"></app-card>
+</div>

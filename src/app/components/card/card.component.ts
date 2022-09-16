@@ -6,6 +6,5 @@ import { TypeUser } from '../../models/userData';
   templateUrl: './card.component.html',
 })
 export class CardComponent {
-  @Input() user: TypeUser;
-  
+  @Input() users: TypeUser[];
 }
